@@ -1,7 +1,7 @@
 # OCR_AWS
 Module to pass an image to text
 
-**You must download de credentials.csv, for get the file go to: <a href="https://console.aws.amazon.com/iam/home?#/users">OCR AWS Credentials</a>
+**You must download de credentials.csv, to get the file go to: <a href="https://console.aws.amazon.com/iam/home?#/users">OCR AWS Credentials</a>
 
 ![alt text](https://raw.githubusercontent.com/rocketbot-cl/OCR_AWS/master/example/ocr_aws.png)
 
