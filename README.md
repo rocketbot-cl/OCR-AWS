@@ -15,7 +15,7 @@ Module to pass an image to text
   </li>  
 </ul>  
 
-<h2>Dependences</h2>
+<h2>Dependencies</h2>
 
 <ul>
   <li>
