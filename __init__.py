@@ -41,9 +41,8 @@ if module == "GetOCR":
     region = GetParams("region")
     result = GetParams("result")
 
-    if region == "":
+    if region is None:
         region = "eu-west-1"
-
 
     with open(csv_path, newline='') as csvfile:
         credentials = csv.reader(csvfile, delimiter=',')
