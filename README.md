@@ -5,6 +5,10 @@ Module to pass an image to text
 
 ![alt text](https://raw.githubusercontent.com/rocketbot-cl/OCR_AWS/master/example/ocr_aws.png)
 
+<strong>Video Example:</strong>
+
+[![OCR AWS](https://img.youtube.com/vi/-rpRTeRUg1Q/0.jpg)](https://www.youtube.com/watch?v=-rpRTeRUg1Q "OCR AWS")
+
 <h2>Link to API Documentation</h2>
 
 <ul>
