@@ -38,40 +38,48 @@ module = GetParams("module")
 if module == "GetOCR":
     image_path = GetParams("image_path")
     csv_path = GetParams("csv_path")
+    data_ = GetParams("data")
     region = GetParams("region")
     result = GetParams("result")
 
-    if region is None:
+    if not region:
         region = "eu-west-1"
 
-    with open(csv_path, newline='') as csvfile:
-        credentials = csv.reader(csvfile, delimiter=',')
-        position = 0
-        for row in credentials:
-            if position == 1:
-                aws_access_key_id = row[2]
-                aws_secret_access_key = row[3]
-            position += 1
 
-
-    # Read document content
-    with open(image_path, 'rb') as document:
-        imageBytes = bytearray(document.read())
-
-    # Amazon Textract client
-    textract = boto3.client('textract', region_name = region, aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-
-    # Call Amazon Textract
-    response = textract.detect_document_text(Document={'Bytes': imageBytes})
+    
 
     try:
+        with open(csv_path, newline='') as csvfile:
+            credentials = csv.reader(csvfile, delimiter=',')
+            position = 0
+            for row in credentials:
+                if position == 1:
+                    aws_access_key_id = row[2]
+                    aws_secret_access_key = row[3]
+                position += 1
+
+
+        # Read document content
+        with open(image_path, 'rb') as document:
+            imageBytes = bytearray(document.read())
+
+        # Amazon Textract client
+        textract = boto3.client('textract', region_name = region, aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+
+        # Call Amazon Textract
+        response = textract.detect_document_text(Document={'Bytes': imageBytes})
         textAnnotation = ""
         for item in response["Blocks"]:
             if item["BlockType"] == "LINE":
                 textAnnotation += item["Text"] +"\n"
+        print(data_)
 
-        response["textAnnotation"] = textAnnotation
-        SetVar(result, response)
+        if result:
+            if data_:
+                response["textAnnotation"] = textAnnotation
+                SetVar(result, response)
+            else:
+                SetVar(result, textAnnotation)
     except Exception as e:
         PrintException()
         raise e
