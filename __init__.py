@@ -54,8 +54,12 @@ if module == "GetOCR":
             position = 0
             for row in credentials:
                 if position == 1:
-                    aws_access_key_id = row[2]
-                    aws_secret_access_key = row[3]
+                    if len(row) > 3:
+                        aws_access_key_id = row[2]
+                        aws_secret_access_key = row[3]
+                    else:
+                        aws_access_key_id = row[0]
+                        aws_secret_access_key = row[1]
                 position += 1
 
 
