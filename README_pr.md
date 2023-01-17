@@ -1,18 +1,18 @@
 # OCR AWS
   
-Module to apply OCR on an image file with Amazon Textract  
+Módulo para aplicar OCR em um arquivo de imagem com Amazon Textract  
 
-## How to install this module
+## Como instalar este módulo
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
+__Baixe__ e __instale__ o conteúdo na pasta 'modules' no caminho do Rocketbot  
 
 
 
 ## Overview
 
 
-1. OCR AWS convert file  
-Extract text from image file.  
+1. OCR AWS converter imagem  
+Extrair o texto de uma imagem.  
 
 
 
