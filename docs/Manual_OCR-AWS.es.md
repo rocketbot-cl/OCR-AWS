@@ -1,14 +1,10 @@
-
-
-
-
 # OCR AWS
   
 Modulo para aplicar OCR sobre un archivo de imagen  
 
 *Read this in other languages: [English](Manual_OCR-AWS.md), [Português](Manual_OCR-AWS.pr.md), [Español](Manual_OCR-AWS.es.md)*
   
-![banner](imgs/Banner_OCR-AWS.png o jpg)
+![banner](imgs/Banner_OCR-AWS.png)
 ## Como instalar este módulo
   
 Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:

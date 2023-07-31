@@ -1,7 +1,3 @@
-
-
-
-
 # OCR AWS
   
 Módulo para aplicar OCR em um arquivo de imagem  

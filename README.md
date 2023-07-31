@@ -1,7 +1,3 @@
-
-
-
-
 # OCR AWS
   
 Module to apply OCR on an image file  
