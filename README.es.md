@@ -10,6 +10,19 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 1. Manual: __Descargar__ el archivo .zip y descomprimirlo en la carpeta modules. El nombre de la carpeta debe ser el mismo al del módulo y dentro debe tener los siguientes archivos y carpetas: \__init__.py, package.json, docs, example y libs. Si tiene abierta la aplicación, refresca el navegador para poder utilizar el nuevo modulo.
 2. Automática: Al ingresar a Rocketbot Studio sobre el margen derecho encontrara la sección de **Addons**, seleccionar **Install Mods**, buscar el modulo deseado y presionar install.  
 
+## Obtener credenciales de AWS
+Para poder utilizar este módulo es necesario contar con credenciales de AWS, para obtenerlas se debe seguir los siguientes pasos:
+1. Ingresar a https://console.aws.amazon.com/iam/home#/users
+2. Seleccionar el usuario que se va a utilizar. Debe contar con permisos de textract:AnalyzeDocument.
+3. Obtener las credenciales de acceso y secret key.
+4. Crear un archivo CSV con las credenciales de la siguiente manera:
+```
+User name, Password, Access key ID, Secret access key, Console login link
+<user-name>,<password>,<access-key-id>,<secret-access-key>,https://<account-id>.signin.aws.amazon.com/console
+```
+5. Guardar el archivo CSV en una ruta accesible para el módulo.
+
+
 
 ## Overview
 
